@@ -1,0 +1,32 @@
+#site-footer{
+	font-family: $font1;
+	border-top: solid thin var(--light-grey);
+	margin-top: rem(34);
+	padding: rem(66) 0;
+	text-align: center;
+	background-color: var(--brand-main);
+	color: white;
+	li {
+		list-style-type: none;
+	}
+	.site-footer__contact {
+		text-align: end;
+    line-height: 2rem;
+	}
+	#searchform{
+		margin: rem(34) 0;
+		input{
+			border: solid thin var(--light-grey);
+		}
+		[type="submit"]{
+			color: var(--text-color);
+			border: none;
+			background-color: transparent;
+			transition: color 0.3s;
+			@include text4;
+			&:hover{
+				color: var(--main-color);
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .member {
+        background-color: transparent; // Remove background color
+
+        .member-image {
+            width: 313px;
+            margin-right: 10px;
+        }
+
+        .member-details {
+            display: flex;
+            flex-direction: column; // Stack text elements vertically
+            flex: 1;
+
+            h2 {
+                margin: 0;
+                font-size: 1.2rem;
+                margin-top: auto; // Align text to the bottom
+            }
+
+            p {
+                margin: 0;
+                color: var(--light-grey);
+            }
+        }
+    }
+}

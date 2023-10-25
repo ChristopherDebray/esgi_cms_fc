@@ -1,0 +1,9 @@
+.partners-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, auto);
+  .partners-container > * {
+    justify-self: center;
+    align-self: center;
+  }
+}

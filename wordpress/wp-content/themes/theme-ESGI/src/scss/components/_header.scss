@@ -1,0 +1,62 @@
+#site-header{
+	font-family: $font2;
+	padding: rem(24) 0 rem(122);
+	@include text3;
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		li{
+			&.current-menu-item, &.current_page_parent, &:hover{
+				a{
+					border-image-source: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+					border-width: 4px;
+					border-style: solid;
+					border-image-slice: 1;
+					border-top: none;
+					border-right: none;
+					border-left: none;
+					transition: .15s all;
+				}
+			}
+			a{	
+				padding: rem(9) rem(7);
+				display: block;
+				text-decoration: none;
+				line-height: 1;
+				color: var(--text-color);
+				margin: 0 rem(24);
+				transition: color 0.3s, background-color 0.3s;
+			}
+		}
+	}
+
+	.main-menu-container {
+		display: none;
+	}
+	
+	/* Style for the burger menu icon */
+	.menu-toggle {
+		cursor: pointer;
+		padding: 10px;
+	}
+	
+	.burger {
+		& span {
+			height: 3px;
+			background-color: var(--brand-main);
+			margin: 4px 0;
+			transition: 0.4s;
+			width: 15px;
+			display: block;
+			&:first-of-type {
+				width: 30px;
+			}
+			&:last-of-type {
+				margin-left: 15px;
+			}
+		}
+	}
+}
