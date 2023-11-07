@@ -3,6 +3,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
     margin: 130px 0;
+    overflow-x: auto;
 
     .member {
         background-color: transparent; // Remove background color

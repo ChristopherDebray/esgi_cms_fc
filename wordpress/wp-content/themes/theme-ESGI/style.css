@@ -4617,6 +4617,12 @@ p {
 #site-footer li {
   list-style-type: none;
 }
+@media screen and (max-width: 600px) {
+  #site-footer .site-footer__icon {
+    width: auto;
+    margin: 50px auto;
+  }
+}
 #site-footer .site-footer__contact {
   text-align: end;
   line-height: 2rem;
@@ -4639,6 +4645,14 @@ p {
 }
 #site-footer #searchform [type=submit]:hover {
   color: var(--main-color);
+}
+#site-footer .site-footer__infos {
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 600px) {
+  #site-footer .site-footer__infos > * {
+    width: 100%;
+  }
 }
 
 .post-list {
@@ -4777,6 +4791,7 @@ p {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin: 130px 0;
+  overflow-x: auto;
 }
 .members-container .member {
   background-color: transparent;
@@ -4814,10 +4829,16 @@ p {
 
 .who-are-we {
   display: flex;
+  flex-wrap: wrap;
 }
 .who-are-we > div:nth-child(2) {
   max-width: 650px;
   margin-left: 150px;
+}
+@media screen and (max-width: 800px) {
+  .who-are-we > div:nth-child(2) {
+    margin-left: 0;
+  }
 }
 .who-are-we > div:nth-child(2) h1 {
   margin-bottom: calc(20 / 16 * 1rem);
