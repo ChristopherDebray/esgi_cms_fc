@@ -9,6 +9,12 @@
 	li {
 		list-style-type: none;
 	}
+	.site-footer__icon {
+		@media screen and (max-width: 600px) {
+			width: auto;
+			margin: 50px auto;
+		}
+	}
 	.site-footer__contact {
 		text-align: end;
     line-height: 2rem;
@@ -26,6 +32,15 @@
 			@include text4;
 			&:hover{
 				color: var(--main-color);
+			}
+		}
+	}
+
+	.site-footer__infos {
+		flex-wrap: wrap;
+		@media screen and (max-width: 600px) {
+			> * {
+				width: 100%;
 			}
 		}
 	}

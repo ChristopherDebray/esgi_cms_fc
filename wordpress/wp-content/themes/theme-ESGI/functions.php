@@ -197,47 +197,23 @@ for ($i = 1; $i <= 4; $i++) {
     ));
 	}
 
-	/*
-	$wp_customize->add_section('member_section', array(
-    'title' => __('Members', 'ESGI'),
+	// WHO ARE WE
+
+	$wp_customize->add_section('who_section', array(
+    'title' => __('Who are we', 'ESGI'),
     'priority' => 30,
 	));
 
-	$wp_customize->add_setting('members', array(
-			'sanitize_callback' => 'your_custom_sanitize_function',
-			'default' => array(),
-	));
+	$wp_customize->add_setting('who_section_main_picture', [
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	]);
 
-	$wp_customize->add_control(new Customize_Repeater_Control($wp_customize, 'members', array(
-			'label' => __('Members', 'ESGI'),
-			'section' => 'member_section',
-			'priority' => 10,
-			'settings' => 'members',
-			'fields' => array(
-					'image' => array(
-							'label' => __('Image', 'ESGI'),
-							'type' => 'image',
-					),
-					'title' => array(
-							'label' => __('Title', 'ESGI'),
-							'type' => 'text',
-					),
-					'phone' => array(
-							'label' => __('Phone Number', 'ESGI'),
-							'type' => 'text',
-					),
-					'email' => array(
-							'label' => __('Email', 'ESGI'),
-							'type' => 'email',
-					),
-			),
-			'row_label' => array(
-					'type' => 'text',
-					'value' => __('Member', 'ESGI'),
-			),
-		))
-	);
-	*/
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'who_section_main_picture', array(
+		'label' => __('Who section picture'),
+		'section' => 'who_section',
+		'settings' => 'who_section_main_picture',
+	)));
 }
 
 

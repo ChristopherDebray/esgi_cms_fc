@@ -48,6 +48,10 @@ a{
 	@include text1;
 }
 
+.base-text-content {
+	@apply textContent;
+}
+
 
 .page-content, .post-content{
 	@include text5;
@@ -129,6 +133,10 @@ a{
 	@include textTitle;
 	&--page {
 		font-size: var(--font-xxl);
+		margin-bottom: 128px;
+		&--homepage{
+			margin-bottom: 225px;
+		}
 	}
 	&--section {
 		font-size: var(--font-xl);
@@ -141,7 +149,28 @@ a{
 	}
 }
 
+h1, h2, h3, h4 {
+	@include textTitle;
+}
+
+p {
+	@include textContent;
+}
+
+.wp-block-heading {
+	font-size: var(--font-xl);
+	margin-bottom: 16px
+}
 
 .section-container {
 	@apply .offset-md-1;
+}
+
+.section--md {
+	max-width: 914px;
+}
+
+.margin--section {
+	margin-top: 130px !important;
+	margin-bottom: 130px !important;
 }
