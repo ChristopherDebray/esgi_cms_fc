@@ -21,7 +21,7 @@ for ($i = 1; $i <= 4; $i++) {
 }
 ?>
 
-<section>
+<section class="margin--section">
   <h1 class="title title--section">Our Team</h1>
     <div class="members-container">
       <?php foreach ($members as $member) : ?>

@@ -1,0 +1,14 @@
+.who-are-we {
+  display: flex;
+  > div:nth-child(2) {
+    max-width: 650px;
+    margin-left: 150px;
+    h1 {
+      margin-bottom: rem(20);
+      margin-top: rem(56);
+    }
+    p {
+      @include textContent;
+    }
+  }
+}

@@ -4331,6 +4331,8 @@ template {
 }
 
 :root {
+  --font-xs: 20px;
+  --font-sm: 26px;
   --font-md: 35px;
   --font-lg: 47px;
   --font-xl: 63px;
@@ -4344,6 +4346,7 @@ template {
   --main-color: #3F51B5;
   --light-grey: lightgrey;
   --brand-main: #050A3A;
+  --grayscale-500: #8A8A8A;
 }
 
 * {
@@ -4390,6 +4393,10 @@ a {
   font-size: calc(25 / 16 * 1rem);
   line-height: auto;
   letter-spacing: 0.1em;
+}
+
+.base-text-content {
+  @apply textContent;
 }
 
 .page-content, .post-content {
@@ -4494,6 +4501,10 @@ a {
 }
 .title--page {
   font-size: var(--font-xxl);
+  margin-bottom: 128px;
+}
+.title--page--homepage {
+  margin-bottom: 225px;
 }
 .title--section {
   font-size: var(--font-xl);
@@ -4505,8 +4516,36 @@ a {
   font-size: var(--font-xxxl);
 }
 
+h1, h2, h3, h4 {
+  color: var(--brand-main);
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  font-family: "Overpass", sans-serif;
+}
+
+p {
+  font-size: var(--font-sm);
+  color: var(--grayscale-500);
+  line-height: calc(38 / 16 * 1rem);
+  font-family: "Overpass", sans-serif;
+}
+
+.wp-block-heading {
+  font-size: var(--font-xl);
+  margin-bottom: 16px;
+}
+
 .section-container {
   @apply .offset-md-1;
+}
+
+.section--md {
+  max-width: 914px;
+}
+
+.margin--section {
+  margin-top: 130px !important;
+  margin-bottom: 130px !important;
 }
 
 #site-header {
@@ -4734,8 +4773,10 @@ a {
 }
 
 .members-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin: 130px 0;
 }
 .members-container .member {
   background-color: transparent;
@@ -4751,11 +4792,12 @@ a {
 }
 .members-container .member .member-details h2 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: var(--font-sm);
   margin-top: auto;
 }
 .members-container .member .member-details p {
   margin: 0;
+  font-size: var(--font-xs);
   color: var(--light-grey);
 }
 
@@ -4768,6 +4810,24 @@ a {
 .partners-container .partners-container > * {
   justify-self: center;
   align-self: center;
+}
+
+.who-are-we {
+  display: flex;
+}
+.who-are-we > div:nth-child(2) {
+  max-width: 650px;
+  margin-left: 150px;
+}
+.who-are-we > div:nth-child(2) h1 {
+  margin-bottom: calc(20 / 16 * 1rem);
+  margin-top: calc(56 / 16 * 1rem);
+}
+.who-are-we > div:nth-child(2) p {
+  font-size: var(--font-sm);
+  color: var(--grayscale-500);
+  line-height: calc(38 / 16 * 1rem);
+  font-family: "Overpass", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */

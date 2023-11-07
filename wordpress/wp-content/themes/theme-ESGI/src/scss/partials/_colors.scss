@@ -3,12 +3,14 @@ $white: #FFF;
 $blue: #3F51B5;
 $light-grey: lightgrey;
 $brandMain: #050A3A;
+$grayscale-base:#8A8A8A;
 :root{
 	--bg-color: #{$white};
 	--text-color: #{$black};
 	--main-color: #{$blue};
 	--light-grey: #{$light-grey};
 	--brand-main: #{$brandMain};
+	--grayscale-500: #{$grayscale-base};
 }
 
 
