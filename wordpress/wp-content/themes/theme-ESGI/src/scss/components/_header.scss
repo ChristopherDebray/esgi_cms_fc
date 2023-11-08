@@ -44,6 +44,9 @@
 	}
 	
 	.burger {
+		&--dark span {
+			background-color: white !important;
+		}
 		& span {
 			height: 3px;
 			background-color: var(--brand-main);
@@ -51,6 +54,7 @@
 			transition: 0.4s;
 			width: 15px;
 			display: block;
+			
 			&:first-of-type {
 				width: 30px;
 			}

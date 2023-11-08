@@ -12,7 +12,10 @@
     </p>
 
     <div class="row">
-      <input type="search" name="" id="" placeholder="Type something to search…">
+      <form class="col-md-8 relative error404__search" id="search-form" method="get" action="#">
+        <input type="search" id="search-input" placeholder="Type something to search…">
+        <span class="absolute right-0 bottom-1 w-auto"> <?= getIcon('search') ?> </span>
+      </form>
     </div>
 	</div>
 </main>

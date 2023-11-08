@@ -14,6 +14,13 @@ body.dark{
 	--text-color: #{$white};
 }
 
+body.error404 {
+	--bg-color: #{$brandMain};
+	h1, p, a {
+		color: #{$white} !important;
+	}
+}
+
 
 svg{
 	fill: var(--text-color);
@@ -40,6 +47,9 @@ a{
 	}
 }
 
+.bg--brand {
+	background-color: var(--brand-main) !important;
+}
 
 /* Styles des publications */
 
@@ -128,6 +138,15 @@ a{
 }
 .left-0 {
 	left: 0;
+}
+.right-0 {
+	right: 0px;
+}
+.bottom-1 {
+	bottom: 1rem;
+}
+.w-auto {
+	width: auto !important;
 }
 
 .title {

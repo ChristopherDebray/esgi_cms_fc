@@ -19,7 +19,7 @@
 				</div>
 
 				<div class="menu-toggle">
-					<div class="burger">
+					<div class="burger burger--dark">
 						<span></span>
 						<span></span>
 					</div>
