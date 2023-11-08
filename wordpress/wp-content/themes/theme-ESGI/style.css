@@ -4614,7 +4614,7 @@ p {
   cursor: pointer;
   padding: 10px;
 }
-#site-header .burger--dark span {
+#site-header .burger--404 span {
   background-color: white !important;
 }
 #site-header .burger span {

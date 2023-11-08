@@ -10,7 +10,12 @@
 			</div>
 		</div>
 	</div>
-	<div>
+	<?php if ($homepage_image = get_theme_mod('homepage_image')) : ?>
+		<div class="d-flex justify-content-end">
+			<img src="<?php echo esc_url($homepage_image); ?>">
+		</div>
+	<?php endif; ?>
+	<div class="section--md m-auto margin--section">
 		<h2 class="title title--section">About Us</h2>
 		<p class="base-text-content">
 		Specializing in the creation of exceptional events for private and corporate clients, we design,
