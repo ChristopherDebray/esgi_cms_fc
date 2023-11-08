@@ -6,7 +6,13 @@ Template Name: AboutUs
 get_header() ?>
 
 <main id="site-content">
-	<h1 class="title title--page"><?php the_title() ?></h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-11">
+				<h1 class="title title--page"><?php the_title() ?></h1>
+			</div>
+		</div>
+	</div>
 	</div>
 	<div>
 		<?php if (has_post_thumbnail()): ?>

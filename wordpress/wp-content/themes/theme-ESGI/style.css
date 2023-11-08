@@ -4357,6 +4357,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Source Serif Pro", serif;
+  overflow-x: hidden;
 }
 
 body.dark {
@@ -4791,7 +4792,11 @@ p {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin: 130px 0;
-  overflow-x: auto;
+}
+@media screen and (max-width: 600px) {
+  .members-container {
+    overflow-x: auto;
+  }
 }
 .members-container .member {
   background-color: transparent;
