@@ -2,8 +2,10 @@
 				<div class="row">
 					<div class="col-md-4 offset-md-1 justify-content-start row">
 						<div class="col-md-12 justify-content-start d-flex relative site-footer__icon">
-							<?= getIcon('esgi') ?>
-							<span class="absolute"><?= getIcon('dot') ?></span>
+							<?php if(!is_404()): ?>
+								<?= getIcon('esgi') ?>
+								<span class="absolute"><?= getIcon('dot') ?></span>
+							<?php endif; ?>
 						</div>
 					</div>
 

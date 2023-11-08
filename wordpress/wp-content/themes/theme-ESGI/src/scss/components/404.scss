@@ -1,0 +1,14 @@
+.error404 {
+  &__search {
+    border-bottom: 2px solid  rgba(255, 255, 255, 0.3);
+  }
+  input {
+    background-color: var(--bg-color);
+    outline: none;
+    border: none;
+    padding: 1rem 0;
+    margin-left: 10px;
+    width: 100%;
+    color: white;
+  }
+}

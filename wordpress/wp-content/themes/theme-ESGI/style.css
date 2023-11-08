@@ -4365,6 +4365,13 @@ body.dark {
   --text-color: #FFF;
 }
 
+body.error404 {
+  --bg-color: #050A3A;
+}
+body.error404 h1, body.error404 p, body.error404 a {
+  color: #FFF !important;
+}
+
 svg {
   fill: var(--text-color);
 }
@@ -4384,6 +4391,10 @@ a {
 
 .site-content--brand-background {
   background-color: var(--brand-background);
+}
+
+.bg--brand {
+  background-color: var(--brand-main) !important;
 }
 
 /* Styles des publications */
@@ -4494,6 +4505,18 @@ a {
   left: 0;
 }
 
+.right-0 {
+  right: 0px;
+}
+
+.bottom-1 {
+  bottom: 1rem;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
 .title {
   color: var(--brand-main);
   line-height: 1.75;
@@ -4591,6 +4614,9 @@ p {
   cursor: pointer;
   padding: 10px;
 }
+#site-header .burger--404 span {
+  background-color: white !important;
+}
 #site-header .burger span {
   height: 3px;
   background-color: var(--brand-main);
@@ -4608,7 +4634,6 @@ p {
 
 #site-footer {
   font-family: "Source Serif Pro", serif;
-  border-top: solid thin var(--light-grey);
   margin-top: calc(34 / 16 * 1rem);
   padding: calc(66 / 16 * 1rem) 0;
   text-align: center;
@@ -4854,6 +4879,19 @@ p {
   color: var(--grayscale-500);
   line-height: calc(38 / 16 * 1rem);
   font-family: "Overpass", sans-serif;
+}
+
+.error404__search {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+.error404 input {
+  background-color: var(--bg-color);
+  outline: none;
+  border: none;
+  padding: 1rem 0;
+  margin-left: 10px;
+  width: 100%;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

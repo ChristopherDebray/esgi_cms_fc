@@ -19,7 +19,11 @@
 				</div>
 
 				<div class="menu-toggle">
-					<div class="burger">
+					<div class="burger 
+							<?php if(is_404()): ?>
+								burger--404
+							<?php endif; ?>
+					">
 						<span></span>
 						<span></span>
 					</div>

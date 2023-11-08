@@ -123,6 +123,17 @@ function esgi_customize_register($wp_customize) {
 		) )
 	);
 
+	$wp_customize->add_setting('homepage_image', array(
+		'default' => '',
+		'sanitize_callback' => 'esc_url_raw',
+	));
+
+	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'homepage_image', array(
+		'label' => __('Image d\'introduction de page d\'accueil'),
+		'section' => 'esgi',
+		'settings' => 'homepage_image',
+	)));
+
 	// PARTNERS
 
 	$wp_customize->add_section('partner_section', array(
@@ -325,15 +336,11 @@ function wpc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'wpc_mime_types');
 
-/*
-function getPartnerIcon() {
-	baks
-	bernieBanks
-	swiger
-	mandalaCommunity
-	balkan
-	airball
+function custom_search_form_action($form) {
+	$search_url = get_permalink(get_page_by_path('your-search-results-page-slug'));
+	$form = str_replace('action="' . home_url('/'), 'action="' . $search_url, $form);
+	return $form;
 }
-*/
+add_filter('get_search_form', 'custom_search_form_action');
 
 ?>
