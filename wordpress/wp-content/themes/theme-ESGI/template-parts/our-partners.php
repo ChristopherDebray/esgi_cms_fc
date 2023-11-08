@@ -1,5 +1,4 @@
 <section>
-  <h1 class="title title--section">Our Partners</h1>
     <div class="partners-container">
       <?php for ($i = 1; $i <= 6; $i++) : ?>
         <?php if ($partner_image = get_theme_mod('partner_' . $i . '_image')) : ?>
