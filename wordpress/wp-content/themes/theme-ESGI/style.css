@@ -4592,6 +4592,12 @@ p {
   margin-bottom: 130px !important;
 }
 
+.our-services--content {
+  width: 60%;
+  margin-left: 10%;
+  margin-bottom: 90px;
+}
+
 #site-header {
   font-family: "Overpass", sans-serif;
   padding: calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
@@ -4954,6 +4960,15 @@ p {
   margin-left: 10px;
   width: 100%;
   color: white;
+}
+
+.services-container {
+  display: flex;
+}
+
+.services-images-container-image {
+  width: 25%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

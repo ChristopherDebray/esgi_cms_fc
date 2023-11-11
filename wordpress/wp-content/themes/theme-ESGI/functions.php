@@ -154,6 +154,26 @@ function esgi_customize_register($wp_customize) {
 		)));
 	}
 
+	// SERVICES
+
+	$wp_customize->add_section('services_image_section', array(
+    'title' => __('Our Services', 'ESGI'),
+    'priority' => 31,
+	));
+
+	for ($i = 1; $i <= 4; $i++) {
+		$wp_customize->add_setting('services_image_' . $i . '_image', array(
+			'default' => '',
+			'sanitize_callback' => 'esc_url_raw',
+		));
+
+		$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'services_image_' . $i . '_image', array(
+			'label' => __('Service ' . $i . ' Image', 'ESGI'),
+			'section' => 'services_image_section',
+			'settings' => 'services_image_' . $i . '_image',
+		)));
+	}
+
 	// MEMBERS
 
 	$wp_customize->add_section('member_section', array(
