@@ -12,8 +12,8 @@
     </p>
 
     <div class="row">
-      <form class="col-md-8 relative error404__search" id="search-form" method="get" action="#">
-        <input type="search" id="search-input" placeholder="Type something to search…">
+      <form role="search" class="col-md-8 relative error404__search" id="searchform" method="get" action="<?php echo home_url('/'); ?>">
+        <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Type something to search…">
         <span class="absolute right-0 bottom-1 w-auto"> <?= getIcon('search') ?> </span>
       </form>
     </div>

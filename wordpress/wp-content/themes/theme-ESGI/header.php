@@ -8,17 +8,17 @@
 
 	<body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-		<header id="site-header">
+		<header id="site-header" class="<?php if(is_404()): ?>
+			active--404
+			<?php endif ?>
+			">
 			<div class="d-flex justify-content-between relative offset-md-1">
-				<div>
+				<div class="relative">
 					<?= getIcon('esgiDark') ?>
-					<span class="absolute left-0"><?= getIcon('dotColored') ?></span>
-	
-					<?= getIcon('esgiLight') ?>
-					<span class="absolute left-0"><?= getIcon('dotColored') ?></span>
+					<span class="absolute left-0 brand-icon"><?= getIcon('dotColored') ?></span>
 				</div>
 
-				<div class="menu-toggle">
+				<div class="menu-toggle mx-3">
 					<div class="burger 
 							<?php if(is_404()): ?>
 								burger--404
@@ -28,17 +28,13 @@
 						<span></span>
 					</div>
 				</div>
-
-				<div class="col-1"></div>
 			</div>
 
 			<div class="offset-md-1 main-menu-container">
-				<div class="container d-flex justify-content-between relative ">
-					<div>	
-						<?= getIcon('esgiLight') ?>
-						<span class="absolute left-0"><?= getIcon('dotColored') ?></span>
+				<div class="d-flex justify-content-between relative p-0 flex-wrap">
+					<div class="py-3">
+						Or try Search
 					</div>
-
 					<?php if (has_nav_menu('primary_menu')){ 
 
 					wp_nav_menu([
