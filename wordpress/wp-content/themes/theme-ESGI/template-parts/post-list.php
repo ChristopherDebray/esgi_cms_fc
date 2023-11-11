@@ -11,7 +11,7 @@ if(!isset($base)){
 
 
 $args = [
-	'posts_per_page' => 2,
+	'posts_per_page' => 6,
 	'post_type' => 'post',
 	'paged' => $paged
 ];
@@ -23,7 +23,7 @@ $the_query = new WP_Query( $args );
 
 ?>
 
-<ul class="post-list">
+<ul class="post-list margin--section">
 	<?php 
 	if($the_query->have_posts()){
 
@@ -33,8 +33,13 @@ $the_query = new WP_Query( $args );
 		?>
 			<li>
 				<a href="<?= get_permalink($p->ID) ?>">
-					<?= $p->post_title ?> 
-					<time><?= wp_date('j F Y', strtotime($p->post_date))  ?></time>
+					<h3><?= $p->post_title ?></h3>
+					<?= $p->post_ ?>
+					<?php if ($categories = get_the_category($p->ID)): ?>
+						<span class="post-category"><?= $categories[0]->name ?>,</span>
+					<?php endif; ?>
+					<time><?= wp_date('F j, Y', strtotime($p->post_date))  ?></time>
+					<p><?= $p->post_content ?></p>
 				</a>
 			</li>
 		<?php } ?>
@@ -45,12 +50,13 @@ $the_query = new WP_Query( $args );
 <?php
 
 
-
+/*
 echo paginate_links( array(
 		'base' => $base,
 		'format' => '?paged=%#%',
 		'current' => max( 1, $paged ),
 		'total' => $the_query->max_num_pages,
 	) );
+	*/
 ?>
 </nav>

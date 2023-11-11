@@ -4331,6 +4331,7 @@ template {
 }
 
 :root {
+  --font-xxs: fontXxs;
   --font-xs: 20px;
   --font-sm: 26px;
   --font-md: 35px;
@@ -4567,6 +4568,16 @@ p {
   max-width: 914px;
 }
 
+.underline--custom {
+  border-image-source: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+  border-width: 4px;
+  border-style: solid;
+  border-image-slice: 1;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
 .margin--section {
   margin-top: 130px !important;
   margin-bottom: 130px !important;
@@ -4683,49 +4694,55 @@ p {
 
 .post-list {
   list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-.post-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  margin: 0 auto;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.post-list a {
+.post-list li {
+  max-width: 502px;
+}
+.post-list li a {
   color: inherit;
   text-decoration: none;
   transition: color 0.3s;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   margin-bottom: calc(30 / 16 * 1rem);
 }
-.post-list a:hover {
+.post-list li a:hover {
   color: var(--main-color);
 }
-.post-list a span {
-  flex: 1;
-  font-size: calc(16 / 16 * 1rem);
-  line-height: 1.49;
-  letter-spacing: 0.1em;
-  padding-right: 2em;
-}
-.post-list a time {
-  flex-shrink: 0;
-  color: var(--grey);
-  font-size: calc(13 / 16 * 1rem);
+.post-list li a h3 {
+  color: var(--brand-main);
+  font-size: calc(26 / 16 * 1rem);
   line-height: 1.75;
+  font-weight: 600;
   letter-spacing: 0.05em;
   font-family: "Overpass", sans-serif;
+}
+.post-list li a span, .post-list li a .post-category, .post-list li a time {
+  color: var(--brand-main);
+  font-size: calc(20 / 16 * 1rem);
+  line-height: 1.75;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-family: "Overpass", sans-serif;
+  font-size: var(--font-xxs);
+}
+.post-list li a p {
+  font-size: var(--font-xxs);
 }
 
 .post-list-pagination {
   text-align: center;
-  color: var(--grey);
-  font-size: calc(13 / 16 * 1rem);
+  color: var(--brand-main);
+  font-size: calc(20 / 16 * 1rem);
   line-height: 1.75;
+  font-weight: 800;
   letter-spacing: 0.05em;
   font-family: "Overpass", sans-serif;
 }

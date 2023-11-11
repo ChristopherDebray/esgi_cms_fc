@@ -190,6 +190,16 @@ p {
 	max-width: 914px;
 }
 
+.underline--custom {
+	border-image-source: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
+	border-width: 4px;
+	border-style: solid;
+	border-image-slice: 1;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
 .margin--section {
 	margin-top: 130px !important;
 	margin-bottom: 130px !important;
