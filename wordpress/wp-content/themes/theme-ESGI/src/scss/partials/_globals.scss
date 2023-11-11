@@ -6,7 +6,7 @@ body{
 	background-color: var(--bg-color);
 	color: var(--text-color);
 	font-family: $font1;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 
 body.dark{
@@ -21,6 +21,9 @@ body.error404 {
 	}
 }
 
+body :not(section):not(div) {
+  overflow-x: hidden;
+}
 
 svg{
 	fill: var(--text-color);
@@ -41,7 +44,9 @@ a{
 	color: var(--main-color);
 }
 
-.site-content {
+#site-content, .site-content, .site-main {
+	padding-top: 180px;
+	overflow-x: hidden;
 	&--brand-background {
 		background-color: var(--brand-background);
 	}
@@ -151,6 +156,7 @@ a{
 
 .title {
 	@include textTitle;
+	word-break: break-all;
 	&--page {
 		font-size: var(--font-xxl);
 		margin-bottom: 128px;

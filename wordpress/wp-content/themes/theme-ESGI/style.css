@@ -4358,7 +4358,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Source Serif Pro", serif;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body.dark {
@@ -4371,6 +4371,10 @@ body.error404 {
 }
 body.error404 h1, body.error404 p, body.error404 a {
   color: #FFF !important;
+}
+
+body :not(section):not(div) {
+  overflow-x: hidden;
 }
 
 svg {
@@ -4390,7 +4394,11 @@ a {
   color: var(--main-color);
 }
 
-.site-content--brand-background {
+#site-content, .site-content, .site-main {
+  padding-top: 180px;
+  overflow-x: hidden;
+}
+#site-content--brand-background, .site-content--brand-background, .site-main--brand-background {
   background-color: var(--brand-background);
 }
 
@@ -4523,6 +4531,7 @@ a {
   line-height: 1.75;
   letter-spacing: 0.05em;
   font-family: "Overpass", sans-serif;
+  word-break: break-all;
 }
 .title--page {
   font-size: var(--font-xxl);
@@ -4585,12 +4594,32 @@ p {
 
 #site-header {
   font-family: "Overpass", sans-serif;
-  padding: calc(24 / 16 * 1rem) 0 calc(122 / 16 * 1rem);
+  padding: calc(24 / 16 * 1rem) 0 calc(24 / 16 * 1rem);
   font-family: "Overpass", sans-serif;
   font-size: calc(16 / 16 * 1rem);
   line-height: 1.49;
   letter-spacing: 0.1em;
+  position: fixed;
+  top: 2rem;
+  width: 100vw;
+  z-index: 99999;
+  transition: background-color 0.3s;
+  background-color: var(--bg-color);
   /* Style for the burger menu icon */
+}
+#site-header * {
+  color: var(--bg-color);
+  font-weight: bold;
+}
+#site-header .brand-icon--light {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#site-header.active, #site-header.active--404 {
+  background-color: var(--brand-main);
+}
+#site-header.active svg *, #site-header.active--404 svg * {
+  fill: white;
 }
 #site-header ul {
   list-style: none;
@@ -4598,6 +4627,12 @@ p {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+#site-header ul li {
+  text-align: right;
+  width: 100%;
+  font-size: var(--font-lg);
 }
 #site-header ul li.current-menu-item a, #site-header ul li.current_page_parent a, #site-header ul li:hover a {
   border-image-source: linear-gradient(90deg, #FFD0A8 0%, #FF4FC0 100%);
@@ -4610,11 +4645,9 @@ p {
   transition: 0.15s all;
 }
 #site-header ul li a {
-  padding: calc(9 / 16 * 1rem) calc(7 / 16 * 1rem);
-  display: block;
+  padding: 0 calc(7 / 16 * 1rem);
   text-decoration: none;
   line-height: 1;
-  color: var(--text-color);
   margin: 0 calc(24 / 16 * 1rem);
   transition: color 0.3s, background-color 0.3s;
 }
@@ -4641,6 +4674,16 @@ p {
 }
 #site-header .burger span:last-of-type {
   margin-left: 15px;
+}
+#site-header .burger.active span {
+  background-color: var(--bg-color);
+}
+#site-header .burger.active span:first-of-type {
+  width: 15px;
+  transform: translate(15px, 7px) rotate(-50deg);
+}
+#site-header .burger.active span:last-of-type {
+  transform: rotate(50deg);
 }
 
 #site-footer {
@@ -4837,7 +4880,7 @@ p {
 }
 @media screen and (max-width: 600px) {
   .members-container {
-    overflow-x: auto;
+    overflow-x: auto !important;
   }
 }
 .members-container .member {
@@ -4869,6 +4912,7 @@ p {
   grid-template-columns: repeat(6, auto);
   align-items: center;
   margin-bottom: 10rem;
+  overflow-x: auto !important;
 }
 .partners-container .partners-container > * {
   justify-self: center;

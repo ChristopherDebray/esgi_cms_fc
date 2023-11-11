@@ -33,6 +33,8 @@ function ajaxifyLinks(){
 function handleToggleMenu() {
 	$('.menu-toggle').click(function () {
 		$('.main-menu-container').slideToggle();
+		$('#site-header').toggleClass('active');
+		$('.burger').toggleClass('active');
 	});
 }
 
@@ -55,18 +57,4 @@ function loadPage(page, nextState, nextTitle, nextURL){
 	})
 
 
-}
-
-
-function handleSearchForm() {
-	document.getElementById('search-form').addEventListener('submit', function(event) {
-		event.preventDefault(); // Prevent the form from submitting traditionally
-
-		const searchTerm = document.getElementById('search-input').value.trim(); // Get the search term
-		if (searchTerm) {
-			// Construct the URL based on the search term (assuming pretty permalinks)
-			const searchURL = '/' + searchTerm;
-			window.location.href = searchURL; // Redirect to the search URL
-		}
-	});
 }

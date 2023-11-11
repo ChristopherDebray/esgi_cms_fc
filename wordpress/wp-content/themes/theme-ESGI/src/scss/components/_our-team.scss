@@ -4,7 +4,7 @@
     grid-gap: 30px;
     margin: 130px 0;
     @media screen and (max-width: 600px) {
-        overflow-x: auto;
+        overflow-x: auto !important;
     }
 
     .member {

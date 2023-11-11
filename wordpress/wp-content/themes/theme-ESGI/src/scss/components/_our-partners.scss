@@ -4,6 +4,7 @@
   grid-template-columns: repeat(6, auto);
   align-items: center;
   margin-bottom: 10rem;
+  overflow-x: auto !important;
   .partners-container > * {
     justify-self: center;
     align-self: center;
