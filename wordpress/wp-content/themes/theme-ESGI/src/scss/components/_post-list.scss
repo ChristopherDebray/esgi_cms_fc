@@ -5,6 +5,9 @@
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 50px;
 	margin: 0 auto;
+	@media screen and (max-width: 600px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
 
 	@include reset-list;
 	li {
