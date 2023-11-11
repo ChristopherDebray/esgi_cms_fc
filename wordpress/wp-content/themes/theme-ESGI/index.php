@@ -25,10 +25,10 @@
 		</div>
 
 		<?php get_template_part('template-parts/who-are-we'); ?>
-		<div class="container">
+		<div>
 			<?php get_template_part('template-parts/our-team'); ?>
-			<h1 class="title title--section">Our Partners</h1>
-			<?php get_template_part('template-parts/our-partners'); ?>
+			<h1 class="container title title--section">Our Services</h1>
+			<?php get_template_part('template-parts/services-images'); ?>
 		</div>
 	</main>
 <?php else: ?>
