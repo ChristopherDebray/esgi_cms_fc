@@ -6,7 +6,7 @@ Template Name: OurServices
 get_header() ?>
 
 <main id="site-content">
-	<h1 class="title title--page"><?php the_title() ?></h1>
+	<h1 class="title title--page container"><?php the_title() ?>.</h1>
 	<?php get_template_part('template-parts/services-images'); ?>
 	<div class="our-services--content">
 		<?php the_content(); ?>

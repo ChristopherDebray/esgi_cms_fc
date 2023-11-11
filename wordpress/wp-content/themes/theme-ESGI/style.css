@@ -4694,7 +4694,6 @@ p {
 
 #site-footer {
   font-family: "Source Serif Pro", serif;
-  margin-top: calc(34 / 16 * 1rem);
   padding: calc(66 / 16 * 1rem) 0;
   text-align: center;
   background-color: var(--brand-main);
